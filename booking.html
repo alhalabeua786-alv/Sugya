@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-ar="طلب مياه | سُقيا" data-en="Water Request | Sugia">
+        طلب مياه | سُقيا
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="booking" data-protected="true">
+
+    <!-- الهيدر -->
+    <header class="header">
+
+        <a href="home.html" class="brand">
+            💧 <span data-ar="سُقيا" data-en="Sugia">سُقيا</span>
+        </a>
+
+        <div class="header-tools">
+
+            <button
+                type="button"
+                id="themeToggle"
+                class="tool-button">
+                🌙 الوضع الليلي
+            </button>
+
+            <button
+                type="button"
+                id="languageToggle"
+                class="tool-button">
+                🌐 English
+            </button>
+
+        </div>
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            type="button"
+            aria-label="فتح القائمة"
+            aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="menu" id="menu">
+
+            <a href="home.html"
+               data-ar="الرئيسية"
+               data-en="Home">الرئيسية</a>
+
+            <a href="about.html"
+               data-ar="من نحن"
+               data-en="About Us">من نحن</a>
+
+            <a href="booking.html"
+               data-ar="طلب مياه"
+               data-en="Water Request">طلب مياه</a>
+
+            <a href="complaints.html"
+               data-ar="الشكاوى والبلاغات"
+               data-en="Complaints and Reports">الشكاوى والبلاغات</a>
+
+            <a href="tracking.html"
+               data-ar="متابعة الطلبات"
+               data-en="Track Requests">متابعة الطلبات</a>
+
+            <a href="contact.html"
+               data-ar="تواصل معنا"
+               data-en="Contact Us">تواصل معنا</a>
+
+            <a href="logout.html"
+               data-ar="تسجيل الخروج"
+               data-en="Log Out">تسجيل الخروج</a>
+
+        </nav>
+
+    </header>
+
+    <!-- محتوى الصفحة -->
+    <main class="container">
+
+        <section class="content-card">
+
+            <h1
+                data-ar="طلب مياه"
+                data-en="Water Request">
+                طلب مياه
+            </h1>
+
+            <form id="bookingForm">
+
+                <!-- البيانات الشخصية -->
+
+                <label for="customerName"
+                    data-ar="الاسم الكامل"
+                    data-en="Full Name">
+                    الاسم الكامل
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    name="customerName"
+                    placeholder="أدخلي الاسم الكامل"
+                    data-placeholder-ar="أدخلي الاسم الكامل"
+                    data-placeholder-en="Enter your full name"
+                    required
+                >
+
+                <label for="customerEmail"
+                    data-ar="البريد الإلكتروني"
+                    data-en="Email Address">
+                    البريد الإلكتروني
+                </label>
+
+                <input
+                    type="email"
+                    id="customerEmail"
+                    name="customerEmail"
+                    placeholder="example@gmail.com"
+                    data-placeholder-ar="أدخلي البريد الإلكتروني"
+                    data-placeholder-en="Enter your email address"
+                    required
+                >
+
+                <label for="customerPhone"
+                    data-ar="رقم الهاتف"
+                    data-en="Phone Number">
+                    رقم الهاتف
+                </label>
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    name="customerPhone"
+                    placeholder="أدخلي رقم الهاتف"
+                    data-placeholder-ar="أدخلي رقم الهاتف"
+                    data-placeholder-en="Enter your phone number"
+                    required
+                >
+
+                <!-- نوع الخدمة -->
+
+                <label for="serviceType"
+                    data-ar="نوع الخدمة"
+                    data-en="Service Type">
+                    نوع الخدمة
+                </label>
+
+                <select id="serviceType" name="serviceType" required>
+
+                    <option
+                        value="طلب صهريج مياه"
+                        data-ar="طلب صهريج مياه"
+                        data-en="Water Tanker Request">
+                        طلب صهريج مياه
+                    </option>
+
+                    <option
+                        value="توصيل مياه"
+                        data-ar="توصيل مياه"
+                        data-en="Water Delivery">
+                        توصيل مياه
+                    </option>
+
+                </select>
+
+                <!-- عدد الصهاريج -->
+
+                <label for="tankerCount"
+                    data-ar="عدد الصهاريج المطلوبة"
+                    data-en="Number of Required Tankers">
+                    عدد الصهاريج المطلوبة
+                </label>
+
+                <select id="tankerCount" name="tankerCount" required>
+
+                    <option
+                        value=""
+                        data-ar="اختاري عدد الصهاريج"
+                        data-en="Select tanker quantity">
+                        اختاري عدد الصهاريج
+                    </option>
+
+                    <option value="1"
+                        data-ar="صهريج واحد"
+                        data-en="1 Tanker">
+                        صهريج واحد
+                    </option>
+
+                    <option value="2"
+                        data-ar="2 صهريج"
+                        data-en="2 Tankers">
+                        2 صهريج
+                    </option>
+
+                    <option value="3"
+                        data-ar="3 صهاريج"
+                        data-en="3 Tankers">
+                        3 صهاريج
+                    </option>
+
+                    <option value="4"
+                        data-ar="4 صهاريج"
+                        data-en="4 Tankers">
+                        4 صهاريج
+                    </option>
+
+                    <option value="5"
+                        data-ar="5 صهاريج"
+                        data-en="5 Tankers">
+                        5 صهاريج
+                    </option>
+
+                    <option value="6"
+                        data-ar="6 صهاريج"
+                        data-en="6 Tankers">
+                        6 صهاريج
+                    </option>
+
+                    <option value="7"
+                        data-ar="7 صهاريج"
+                        data-en="7 Tankers">
+                        7 صهاريج
+                    </option>
+
+                    <option value="8"
+                        data-ar="8 صهاريج"
+                        data-en="8 Tankers">
+                        8 صهاريج
+                    </option>
+
+                    <option value="9"
+                        data-ar="9 صهاريج"
+                        data-en="9 Tankers">
+                        9 صهاريج
+                    </option>
+
+                    <option value="10"
+                        data-ar="10 صهاريج"
+                        data-en="10 Tankers">
+                        10 Tankers
+                    </option>
+
+                    <option value="more"
+                        data-ar="أكثر من 10"
+                        data-en="More than 10">
+                        أكثر من 10
+                    </option>
+
+                </select>
+
+                <!-- الموقع -->
+
+                <h2
+                    data-ar="بيانات الموقع"
+                    data-en="Location Information">
+                    بيانات الموقع
+                </h2>
+
+                <label for="city"
+                    data-ar="المدينة"
+                    data-en="City">
+                    المدينة
+                </label>
+
+                <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    placeholder="مثلاً: أم درمان"
+                    data-placeholder-ar="مثلاً: أم درمان"
+                    data-placeholder-en="Example: Omdurman"
+                    required
+                >
+
+                <label for="locality"
+                    data-ar="المحلية"
+                    data-en="Locality">
+                    المحلية
+                </label>
+
+                <input
+                    type="text"
+                    id="locality"
+                    name="locality"
+                    placeholder="أدخلي اسم المحلية"
+                    data-placeholder-ar="أدخلي اسم المحلية"
+                    data-placeholder-en="Enter the locality"
+                    required
+                >
+
+                <label for="neighborhood"
+                    data-ar="الحي"
+                    data-en="Neighborhood">
+                    الحي
+                </label>
+
+                <input
+                    type="text"
+                    id="neighborhood"
+                    name="neighborhood"
+                    placeholder="أدخلي اسم الحي"
+                    data-placeholder-ar="أدخلي اسم الحي"
+                    data-placeholder-en="Enter the neighborhood"
+                    required
+                >
+
+                <label for="houseNumber"
+                    data-ar="رقم المنزل"
+                    data-en="House Number">
+                    رقم المنزل
+                </label>
+
+                <input
+                    type="text"
+                    id="houseNumber"
+                    name="houseNumber"
+                    placeholder="أدخلي رقم المنزل"
+                    data-placeholder-ar="أدخلي رقم المنزل"
+                    data-placeholder-en="Enter the house number"
+                    required
+                >
+
+                <label for="locationDetails"
+                    data-ar="علامة مميزة أو وصف إضافي للموقع"
+                    data-en="Landmark or Additional Location Details">
+                    علامة مميزة أو وصف إضافي للموقع
+                </label>
+
+                <textarea
+                    id="locationDetails"
+                    name="locationDetails"
+                    placeholder="مثلاً: بالقرب من المسجد أو المدرسة"
+                    data-placeholder-ar="مثلاً: بالقرب من المسجد أو المدرسة"
+                    data-placeholder-en="Example: Near the mosque or school"
+                    rows="4"
+                ></textarea>
+
+                <input
+                    type="hidden"
+                    id="customerAddress"
+                    name="customerAddress"
+                >
+
+                <!-- إرسال الطلب -->
+
+                <button
+                    class="btn"
+                    type="submit"
+                    data-ar="إرسال الطلب"
+                    data-en="Submit Request">
+                    إرسال الطلب
+                </button>
+
+            </form>
+
+            <p id="bookingMessage" role="status"></p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
