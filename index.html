@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-ar="تسجيل الدخول | سُقيا"
+           data-en="Login | Sugia">تسجيل الدخول | سُقيا</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="login">
+
+    <main class="login-page">
+
+        <section class="login-card">
+
+            <div class="water-logo">💧</div>
+
+            <h1 data-ar="سُقيا" data-en="Sugia">سُقيا</h1>
+
+            <p class="subtitle"
+               data-ar="الهيئة القومية للمياه"
+               data-en="National Water Authority">
+                الهيئة القومية للمياه
+            </p>
+
+            <!-- تسجيل الدخول -->
+
+            <section id="loginSection">
+
+                <h2 data-ar="تسجيل الدخول"
+                    data-en="Login">تسجيل الدخول</h2>
+
+                <p data-ar="مرحباً بك في منصتنا الإلكترونية"
+                   data-en="Welcome to our electronic platform">
+                    مرحباً بك في منصتنا الإلكترونية
+                </p>
+
+                <form id="loginForm">
+
+                    <label for="username"
+                           data-ar="اسم المستخدم"
+                           data-en="Username">
+                        اسم المستخدم
+                    </label>
+
+                    <input
+                        id="username"
+                        type="text"
+                        placeholder="اكتبي اسم المستخدم"
+                        data-placeholder-ar="اكتبي اسم المستخدم"
+                        data-placeholder-en="Enter your username"
+                        required
+                    >
+
+                    <label for="password"
+                           data-ar="كلمة المرور"
+                           data-en="Password">
+                        كلمة المرور
+                    </label>
+
+                    <input
+                        id="password"
+                        type="password"
+                        placeholder="اكتبي كلمة المرور"
+                        data-placeholder-ar="اكتبي كلمة المرور"
+                        data-placeholder-en="Enter your password"
+                        required
+                    >
+
+                    <button type="submit" class="btn"
+                            data-ar="دخول"
+                            data-en="Login">
+                        دخول
+                    </button>
+
+                </form>
+
+                <div class="register-area">
+
+                    <p data-ar="ليس لديك حساب؟"
+                       data-en="Don't have an account?">
+                        ليس لديك حساب؟
+                    </p>
+
+                    <button
+                        type="button"
+                        id="showRegister"
+                        class="btn secondary"
+                        data-ar="إنشاء حساب جديد"
+                        data-en="Create New Account">
+                        إنشاء حساب جديد
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- إنشاء حساب -->
+
+            <section id="registerSection" hidden>
+
+                <h2 data-ar="إنشاء حساب جديد"
+                    data-en="Create New Account">
+                    إنشاء حساب جديد
+                </h2>
+
+                <form id="registerForm">
+
+                    <label for="newName"
+                           data-ar="الاسم الكامل"
+                           data-en="Full Name">
+                        الاسم الكامل
+                    </label>
+
+                    <input
+                        id="newName"
+                        type="text"
+                        placeholder="أدخلي الاسم الكامل"
+                        data-placeholder-ar="أدخلي الاسم الكامل"
+                        data-placeholder-en="Enter your full name"
+                        required
+                    >
+
+                    <label for="newUsername"
+                           data-ar="اسم المستخدم"
+                           data-en="Username">
+                        اسم المستخدم
+                    </label>
+
+                    <input
+                        id="newUsername"
+                        type="text"
+                        placeholder="اختاري اسم مستخدم"
+                        data-placeholder-ar="اختاري اسم مستخدم"
+                        data-placeholder-en="Choose a username"
+                        required
+                    >
+
+                    <label for="newPassword"
+                           data-ar="كلمة المرور"
+                           data-en="Password">
+                        كلمة المرور
+                    </label>
+
+                    <input
+                        id="newPassword"
+                        type="password"
+                        placeholder="اختاري كلمة مرور"
+                        data-placeholder-ar="اختاري كلمة مرور"
+                        data-placeholder-en="Choose a password"
+                        required
+                    >
+
+                    <button type="submit" class="btn"
+                            data-ar="حفظ الحساب"
+                            data-en="Save Account">
+                        حفظ الحساب
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelRegister"
+                        class="btn secondary"
+                        data-ar="الرجوع لتسجيل الدخول"
+                        data-en="Back to Login">
+                        الرجوع لتسجيل الدخول
+                    </button>
+
+                </form>
+
+            </section>
+
+            <p id="authMessage" role="status"></p>
+
+        </section>
+
+    </main>
+
+    <!-- أزرار اللغة والوضع الليلي -->
+
+    <div class="page-tools">
+
+        <button type="button"
+                id="languageToggle"
+                class="tool-button">
+            🌐 English
+        </button>
+
+        <button type="button"
+                id="themeToggle"
+                class="tool-button">
+            🌙 الوضع الليلي
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
