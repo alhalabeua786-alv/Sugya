@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الشكاوى والبلاغات | سُقيا</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-protected="true">
+
+<header class="header">
+  <a href="home.html" class="brand">
+  💧 <span data-ar="سُقيا" data-en="Sugia">سُقيا</span>
+</a>
+  <button class="menu-button" id="menuButton"
+          aria-label="القائمة">☰</button>
+  <nav class="menu" id="menu">
+    <a href="home.html">الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="booking.html">طلب مياه</a>
+    <a href="complaints.html">الشكاوى والبلاغات</a>
+    <a href="tracking.html">متابعة الطلبات</a>
+    <a href="contact.html">تواصل معنا</a>
+    <a href="logout.html">تسجيل الخروج</a>
+  </nav>
+</header>
+
+<div class="page-tools">
+  <button type="button" id="themeToggle" class="tool-button">🌙 الوضع الليلي</button>
+  <button type="button" id="languageToggle" class="tool-button">English</button>
+</div>
+
+<main class="container">
+  <section class="form-hero">
+    <div class="water-logo">📢</div>
+    <h1>الشكاوى والبلاغات</h1>
+    <p>نستقبل ملاحظاتكم للمساعدة في تحسين خدمات المياه.</p>
+  </section>
+
+  <section class="content-card form-card">
+    <h2>تقديم شكوى أو بلاغ جديد</h2>
+    <p>يرجى إدخال البيانات التالية بدقة.</p>
+
+    <form id="complaintForm">
+      <label for="complaintName">الاسم الكامل</label>
+      <input id="complaintName" type="text" required
+             placeholder="اكتبي اسمك">
+
+      <label for="complaintPhone">رقم الهاتف</label>
+      <input id="complaintPhone" type="tel" required
+             placeholder="رقم للتواصل">
+
+      <label for="complaintType">نوع البلاغ</label>
+      <select id="complaintType" required>
+        <option value="">اختاري نوع البلاغ</option>
+        <option>انقطاع المياه</option>
+        <option>ضعف ضغط المياه</option>
+        <option>تسرب مياه</option>
+        <option>مشكلة في التوصيل</option>
+        <option>شكوى عن الخدمة</option>
+        <option>اقتراح أو ملاحظة</option>
+        <option>أخرى</option>
+      </select>
+
+      <label for="complaintPriority">الأولوية</label>
+      <select id="complaintPriority" required>
+        <option>عادية</option>
+        <option>متوسطة</option>
+        <option>عاجلة</option>
+      </select>
+
+      <label for="complaintAddress">موقع المشكلة</label>
+      <input id="complaintAddress" type="text" required
+             placeholder="الحي والشارع أو أقرب معلم">
+
+      <label for="complaintDetails">تفاصيل الشكوى</label>
+      <textarea id="complaintDetails" rows="5" required
+                placeholder="اشرحي المشكلة باختصار..."></textarea>
+
+      <button type="submit" class="btn">إرسال الشكوى</button>
+    </form>
+
+    <div id="complaintMessage" class="status-message"
+         role="status"></div>
+  </section>
+
+  <section class="info-card">
+    <h3>قبل إرسال البلاغ</h3>
+    <p>تأكدي من صحة رقم الهاتف ووصف موقع المشكلة حتى يسهل تحديدها.</p>
+  </section>
+</main>
+
+<footer class="footer">© 2026 منصة سُقيا</footer>
+<script src="script.js"></script>
+</body>
+</html>
