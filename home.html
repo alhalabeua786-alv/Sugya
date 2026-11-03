@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-ar="الرئيسية | سُقيا" data-en="Home | Sugia">
+        الرئيسية | سُقيا
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="home" data-protected="true">
+
+    <!-- الهيدر -->
+    <header class="header">
+
+        <a href="home.html" class="brand">
+            💧 <span data-ar="سُقيا" data-en="Sugia">سُقيا</span>
+        </a>
+
+        <!-- أدوات اللغة والوضع الليلي -->
+        <div class="header-tools">
+
+            <button
+                type="button"
+                id="themeToggle"
+                class="tool-button">
+                🌙 الوضع الليلي
+            </button>
+
+            <button
+                type="button"
+                id="languageToggle"
+                class="tool-button">
+                🌐 English
+            </button>
+
+        </div>
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="فتح القائمة"
+            aria-expanded="false"
+            type="button">
+            ☰
+        </button>
+
+        <nav id="menu" class="menu">
+
+            <a href="home.html"
+               data-ar="الرئيسية"
+               data-en="Home">
+                الرئيسية
+            </a>
+
+            <a href="about.html"
+               data-ar="من نحن"
+               data-en="About Us">
+                من نحن
+            </a>
+
+            <a href="booking.html"
+               data-ar="طلب مياه"
+               data-en="Water Request">
+                طلب مياه
+            </a>
+
+            <a href="complaints.html"
+               data-ar="الشكاوى والبلاغات"
+               data-en="Complaints">
+                الشكاوى والبلاغات
+            </a>
+
+            <a href="tracking.html"
+               data-ar="متابعة الطلبات"
+               data-en="Track Requests">
+                متابعة الطلبات
+            </a>
+
+            <a href="contact.html"
+               data-ar="تواصل معنا"
+               data-en="Contact Us">
+                تواصل معنا
+            </a>
+
+            <a href="logout.html"
+               data-ar="تسجيل الخروج"
+               data-en="Logout">
+                تسجيل الخروج
+            </a>
+
+        </nav>
+
+    </header>
+
+    <main class="container">
+
+        <!-- الواجهة الرئيسية -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-icon">💧</span>
+
+                <h1
+                    data-ar="أهلاً بك في منصة سُقيا"
+                    data-en="Welcome to the Sugia Platform">
+                    أهلاً بك في منصة سُقيا
+                </h1>
+
+                <h2
+                    data-ar="الهيئة القومية للمياه"
+                    data-en="National Water Corporation">
+                    الهيئة القومية للمياه
+                </h2>
+
+                <p
+                    data-ar="خدمات المياه أصبحت أسهل وأسرع."
+                    data-en="Water services are now easier and faster.">
+                    خدمات المياه أصبحت أسهل وأسرع.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- الخدمات -->
+        <section class="services-section">
+
+            <h2
+                class="section-title"
+                data-ar="خدماتنا الإلكترونية"
+                data-en="Our Online Services">
+                خدماتنا الإلكترونية
+            </h2>
+
+            <div class="services">
+
+                <a class="service-card" href="booking.html">
+
+                    <h3
+                        data-ar="طلب مياه"
+                        data-en="Water Request">
+                        طلب مياه
+                    </h3>
+
+                    <p
+                        data-ar="تقديم طلب للحصول على المياه."
+                        data-en="Submit a request for water.">
+                        تقديم طلب للحصول على المياه.
+                    </p>
+
+                </a>
+
+                <a class="service-card" href="complaints.html">
+
+                    <h3
+                        data-ar="الشكاوى والبلاغات"
+                        data-en="Complaints and Reports">
+                        الشكاوى والبلاغات
+                    </h3>
+
+                    <p
+                        data-ar="إرسال شكوى أو الإبلاغ عن مشكلة."
+                        data-en="Submit a complaint or report a problem.">
+                        إرسال شكوى أو الإبلاغ عن مشكلة.
+                    </p>
+
+                </a>
+
+                <a class="service-card" href="tracking.html">
+
+                    <h3
+                        data-ar="متابعة الطلبات"
+                        data-en="Track Requests">
+                        متابعة الطلبات
+                    </h3>
+
+                    <p
+                        data-ar="متابعة الطلبات المقدمة."
+                        data-en="Track your submitted requests.">
+                        متابعة الطلبات المقدمة.
+                    </p>
+
+                </a>
+
+                <a class="service-card" href="about.html">
+
+                    <h3
+                        data-ar="من نحن"
+                        data-en="About Us">
+                        من نحن
+                    </h3>
+
+                    <p
+                        data-ar="تعرّف على منصة سُقيا."
+                        data-en="Learn about the Sugia platform.">
+                        تعرّف على منصة سُقيا.
+                    </p>
+
+                </a>
+
+                <a class="service-card" href="contact.html">
+
+                    <h3
+                        data-ar="تواصل معنا"
+                        data-en="Contact Us">
+                        تواصل معنا
+                    </h3>
+
+                    <p
+                        data-ar="طرق التواصل والاستفسارات."
+                        data-en="Contact information and inquiries.">
+                        طرق التواصل والاستفسارات.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- التذييل -->
+    <footer class="footer"
+        data-ar="© 2026 منصة سُقيا - الهيئة القومية للمياه"
+        data-en="© 2026 Sugia Platform - National Water Corporation">
+
+        © 2026 منصة سُقيا - الهيئة القومية للمياه
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
