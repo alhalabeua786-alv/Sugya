@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>متابعة الطلبات | سُقيا</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-protected="true">
+<header class="header">
+<a href="home.html" class="brand">
+  💧 <span data-ar="سُقيا" data-en="Sugia">سُقيا</span>
+</a>
+  <button class="menu-button" id="menuButton">☰</button>
+  <nav class="menu" id="menu">
+    <a href="home.html">الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="booking.html">طلب مياه</a>
+    <a href="complaints.html">الشكاوى</a>
+    <a href="tracking.html">متابعة الطلبات</a>
+    <a href="contact.html">تواصل معنا</a>
+    <a href="logout.html">تسجيل الخروج</a>
+  </nav>
+</header>
+<main class="container">
+  <section class="content-card">
+    <h1>متابعة الطلبات</h1>
+    <p>أدخلي رقم الطلب الذي ظهر لك بعد تقديم الطلب.</p>
+    <form id="trackingForm">
+      <label for="orderNumber">رقم الطلب</label>
+      <input id="orderNumber" required>
+      <button class="btn" type="submit">بحث</button>
+    </form>
+    <div id="trackingResult" aria-live="polite"></div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
