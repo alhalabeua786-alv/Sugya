@@ -1,18 +1,24 @@
 
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>متابعة الطلبات | سُقيا</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body data-protected="true">
+
 <header class="header">
-<a href="home.html" class="brand">
-  💧 <span data-ar="سُقيا" data-en="Sugia">سُقيا</span>
-</a>
+
+  <a href="home.html" class="brand">
+    💧 <span data-ar="سُقيا" data-en="Sugia">سُقيا</span>
+  </a>
+
   <button class="menu-button" id="menuButton">☰</button>
+
   <nav class="menu" id="menu">
     <a href="home.html">الرئيسية</a>
     <a href="about.html">من نحن</a>
@@ -22,19 +28,71 @@
     <a href="contact.html">تواصل معنا</a>
     <a href="logout.html">تسجيل الخروج</a>
   </nav>
+
 </header>
-<main class="container">
+
+<main class="container tracking-page">
+
   <section class="content-card">
-    <h1>متابعة الطلبات</h1>
-    <p>أدخلي رقم الطلب الذي ظهر لك بعد تقديم الطلب.</p>
-    <form id="trackingForm">
-      <label for="orderNumber">رقم الطلب</label>
-      <input id="orderNumber" required>
-      <button class="btn" type="submit">بحث</button>
-    </form>
-    <div id="trackingResult" aria-live="polite"></div>
+
+    <div class="tracking-heading">
+      <span class="tracking-icon">📋</span>
+      <h1>طلباتي</h1>
+      <p>
+        يمكنك متابعة جميع طلباتك والاطلاع على تفاصيل كل طلب.
+      </p>
+    </div>
+
+    <div class="orders-summary">
+
+      <div class="summary-box">
+        <span>إجمالي الطلبات</span>
+        <strong id="totalOrders">0</strong>
+      </div>
+
+      <div class="summary-box">
+        <span>قيد المراجعة</span>
+        <strong id="pendingOrders">0</strong>
+      </div>
+
+      <div class="summary-box">
+        <span>الطلبات المكتملة</span>
+        <strong id="completedOrders">0</strong>
+      </div>
+
+    </div>
+
+    <div class="orders-section">
+
+      <div class="orders-title">
+        <h2>قائمة الطلبات</h2>
+        <span id="ordersCount">0 طلب</span>
+      </div>
+
+      <div id="ordersList" class="orders-list"></div>
+
+    </div>
+
+    <div id="orderDetails" class="order-details" hidden>
+
+      <div class="details-heading">
+        <h2>تفاصيل الطلب</h2>
+
+        <button type="button" id="closeDetails"
+          class="close-details">
+          ✕
+        </button>
+      </div>
+
+      <div id="detailsContent"></div>
+
+    </div>
+
   </section>
+
 </main>
-<script src="js/script.js"></script>
+
+<script src="script.js"></script>
+
 </body>
 </html>
